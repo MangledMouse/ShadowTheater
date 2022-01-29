@@ -1,0 +1,1 @@
+This is Shadow Theater, a simple game where players manipulate "hands" before a light is shined on the overlapping "hands" to see if the shadows match the target shape.
