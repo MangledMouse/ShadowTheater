@@ -27,6 +27,9 @@ public class CoreGameplayController : MonoBehaviour
     // Start is called before the first frame update
 
     public float DifferenceInRotations;
+    public float ActiveShapeRotation;
+    public float LitShapeRotation;
+    public int TargetRotation;
 
     public Light AreaLight;
 
@@ -55,7 +58,7 @@ public class CoreGameplayController : MonoBehaviour
             }
             
         }
-        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             if (StateOfPlay == PlayState.Result)
                 ResetRound();
@@ -64,12 +67,12 @@ public class CoreGameplayController : MonoBehaviour
 
     private void ResetRound()
     {
-        //throw new NotImplementedException();
+        SetUpIntro(false);
     }
 
     private void StartNewRound()
     {
-        //throw new NotImplementedException();
+        SetUpIntro();
     }
 
     private void StopSpinningAndCompare()
@@ -99,55 +102,69 @@ public class CoreGameplayController : MonoBehaviour
         ActiveShape.targetShape.gameObject.SetActive(false);
     }
 
-    private void SetUpIntro()
+    private void SetUpIntro(bool withNewShape = true)
     {
+        RoundFinishedText.gameObject.SetActive(false);
+        PercentageCorrectText.gameObject.SetActive(false);
         //Show Explannation Text to start
         IntroText.gameObject.SetActive(true);
         StateOfPlay = PlayState.Intro;
         //In the future I will want there to be a random selection from the mirrorshapes array. Next there will be a random rotation, then the random MirroredShape's Lit Shape will be set to that rotation
         //and then the lit shape will have Active set to true and the text will appear on screen
 
-        ActivateShape(ChooseActiveShape());
+        if (withNewShape)
+        {
+            ActiveShape = ChooseActiveShape();
+        }
+        ActivateShape(ActiveShape, withNewShape);
     }
 
     private int CorrectPercentage()
     {
         float rotation = ActiveShape.transform.rotation.eulerAngles.x;
-        while(rotation > 360)
-        {
-            rotation -= 360;
-        }
-
-        DifferenceInRotations = rotation - ActiveShape.targetShape.transform.rotation.eulerAngles.x;
+        ActiveShapeRotation = rotation;
+        LitShapeRotation = ActiveShape.targetShape.transform.rotation.eulerAngles.x;
+        if (ActiveShapeRotation > LitShapeRotation)
+            DifferenceInRotations = ActiveShapeRotation - LitShapeRotation;
+        else
+            DifferenceInRotations = LitShapeRotation - ActiveShapeRotation;
 
         //for percentage we want divided by 360 then multiplied by 100 so divided by 3.6
         float percentageDifference = DifferenceInRotations / 3.6f;
         if (percentageDifference < 0)
             percentageDifference *= -1;
-        if (percentageDifference > 50)
-            percentageDifference -= 50;
 
+        percentageDifference = (float)Math.Round((decimal)percentageDifference, 0);
         return (int)percentageDifference;
     }
 
-    public void ActivateShape(MirroredShape shape)
+    public void ActivateShape(MirroredShape shape, bool withNewShape = true)
     {
         shape.gameObject.SetActive(false);
-
-        Quaternion targetRotation = Quaternion.Euler(GetTargetRotation(), 0, 0);
-        shape.targetShape.gameObject.transform.SetPositionAndRotation(TargetLocationForLitShape, targetRotation);
+        if (withNewShape)
+        {
+            Quaternion targetRotation = Quaternion.Euler(GetTargetRotation(), 0, 0);
+            shape.targetShape.gameObject.transform.SetPositionAndRotation(TargetLocationForLitShape, targetRotation);
+        }
         shape.targetShape.gameObject.SetActive(true);
-        
     }
 
     public int GetTargetRotation()
     {
         System.Random rnd = new System.Random();
-        return rnd.Next(0, 360);
+        TargetRotation = rnd.Next(0, 360);
+        return TargetRotation;
     }
 
     public MirroredShape ChooseActiveShape()
     {
-        return ActiveShape;
+        foreach(MirroredShape ms in MirroredShapes)
+        {
+            ms.gameObject.SetActive(false);
+            ms.targetShape.gameObject.SetActive(false);
+        }
+        System.Random rnd = new System.Random();
+        int randomIndex= rnd.Next(0, MirroredShapes.Length);
+        return MirroredShapes[randomIndex];
     }
 }
