@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -179,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 7055679930673677512, guid: 1a88f3d7b74af76498bdfae65a4e4698,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7055679930673677512, guid: 1a88f3d7b74af76498bdfae65a4e4698,
         type: 3}
@@ -235,6 +235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shape_mirrored002_lit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683456726902251122, guid: 1a88f3d7b74af76498bdfae65a4e4698,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a88f3d7b74af76498bdfae65a4e4698, type: 3}
@@ -552,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 3536863194962696716, guid: 1e3f5e084339c5c468c8fc022a8f7f41,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3536863194962696716, guid: 1e3f5e084339c5c468c8fc022a8f7f41,
         type: 3}
@@ -626,7 +631,7 @@ PrefabInstance:
     - target: {fileID: 2786823492012899364, guid: 0bd577c22be754e4fb65539e4d7bee32,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2786823492012899364, guid: 0bd577c22be754e4fb65539e4d7bee32,
         type: 3}
@@ -774,12 +779,12 @@ PrefabInstance:
     - target: {fileID: 7055679930673677512, guid: 2b943059ba0c53a4bbe6eba4288df765,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7055679930673677512, guid: 2b943059ba0c53a4bbe6eba4288df765,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 7055679930673677512, guid: 2b943059ba0c53a4bbe6eba4288df765,
         type: 3}
@@ -848,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 2786823492012899364, guid: 1d31084716896d04e88f286ab481b1b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2786823492012899364, guid: 1d31084716896d04e88f286ab481b1b3,
         type: 3}
@@ -922,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 82722194630782661, guid: 4be267f27ca8d7149b4ae60bc34a42e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 82722194630782661, guid: 4be267f27ca8d7149b4ae60bc34a42e3,
         type: 3}
@@ -991,7 +996,7 @@ PrefabInstance:
     - target: {fileID: 3536863194962696716, guid: 48fe1a011c789ff4f992406bca465dbe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3536863194962696716, guid: 48fe1a011c789ff4f992406bca465dbe,
         type: 3}
@@ -1055,4 +1060,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48fe1a011c789ff4f992406bca465dbe, type: 3}
-
