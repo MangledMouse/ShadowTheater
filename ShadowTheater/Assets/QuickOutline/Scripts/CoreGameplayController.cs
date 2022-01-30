@@ -23,7 +23,7 @@ public class CoreGameplayController : MonoBehaviour
     public UnityEngine.UI.Text RoundFinishedText;
     public UnityEngine.UI.Text PercentageCorrectText;
 
-    public string PercentageCorrectTextString = "Percentage Correct ";
+    private string PercentageCorrectTextString = "Percentage Correct ";
     // Start is called before the first frame update
 
     public float DifferenceInRotations;
@@ -31,7 +31,7 @@ public class CoreGameplayController : MonoBehaviour
     public float LitShapeRotation;
     public int TargetRotation;
 
-    public Light AreaLight;
+    public AudioSource ButtonPressSound;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class CoreGameplayController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            ButtonPressSound.Play();
             switch(StateOfPlay)
             {
                 case PlayState.Intro:
@@ -60,6 +61,7 @@ public class CoreGameplayController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Return))
         {
+            ButtonPressSound.Play();
             if (StateOfPlay == PlayState.Result)
                 ResetRound();
         }

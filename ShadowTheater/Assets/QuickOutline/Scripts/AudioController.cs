@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioSource source;
-    public AudioSource persistentSource;
+    private AudioSource source;
+    private AudioSource persistentSource;
     // Start is called before the first frame update
     void Start()
     {
