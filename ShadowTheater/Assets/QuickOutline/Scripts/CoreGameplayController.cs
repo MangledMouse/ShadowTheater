@@ -23,7 +23,7 @@ public class CoreGameplayController : MonoBehaviour
     public UnityEngine.UI.Text RoundFinishedText;
     public UnityEngine.UI.Text PercentageCorrectText;
 
-    public string PercentageCorrectTextString = "Percentage Incorrect ";
+    public string PercentageCorrectTextString = "Percentage Correct ";
     // Start is called before the first frame update
 
     public float DifferenceInRotations;
@@ -135,7 +135,8 @@ public class CoreGameplayController : MonoBehaviour
             percentageDifference *= -1;
 
         percentageDifference = (float)Math.Round((decimal)percentageDifference, 0);
-        return (int)percentageDifference;
+
+        return 100 - (int)percentageDifference;
     }
 
     public void ActivateShape(MirroredShape shape, bool withNewShape = true)
