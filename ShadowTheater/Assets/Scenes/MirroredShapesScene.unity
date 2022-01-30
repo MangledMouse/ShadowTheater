@@ -195,7 +195,6 @@ MonoBehaviour:
   IntroText: {fileID: 417063597}
   RoundFinishedText: {fileID: 1860315524}
   PercentageCorrectText: {fileID: 1904834235}
-  PercentageCorrectTextString: 'Percentage Incorrect '
   DifferenceInRotations: 0
   ActiveShapeRotation: 0
   LitShapeRotation: 0
@@ -235,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -240}
+  m_AnchoredPosition: {x: 250, y: -170}
   m_SizeDelta: {x: 800, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417063597
@@ -10749,8 +10748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598980e43ba79434893594266331cf3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  persistentSource: {fileID: 0}
 --- !u!1 &603706385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7683456726902251122, guid: 2b943059ba0c53a4bbe6eba4288df765,
@@ -11251,7 +11248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -11506,7 +11503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 680, y: -240}
+  m_AnchoredPosition: {x: 680, y: -180}
   m_SizeDelta: {x: 2000, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860315524
@@ -11541,7 +11538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nice work. Press Space for a new Shape. Press Enter to try this shape again
+  m_Text: Nice work. Press Space for a new shape. Press Enter to try this shape again
 --- !u!222 &1860315525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11584,7 +11581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -220}
+  m_AnchoredPosition: {x: 80, y: -150}
   m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904834235
