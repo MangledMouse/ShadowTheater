@@ -197,6 +197,9 @@ MonoBehaviour:
   PercentageCorrectText: {fileID: 1904834235}
   PercentageCorrectTextString: 'Percentage Incorrect '
   DifferenceInRotations: 0
+  ActiveShapeRotation: 0
+  LitShapeRotation: 0
+  TargetRotation: 0
   AreaLight: {fileID: 1721923920}
 --- !u!1 &417063595
 GameObject:
@@ -1331,7 +1334,7 @@ PrefabInstance:
     - target: {fileID: 4205982697506980022, guid: 1e3f5e084339c5c468c8fc022a8f7f41,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e3f5e084339c5c468c8fc022a8f7f41, type: 3}
@@ -1405,7 +1408,7 @@ PrefabInstance:
     - target: {fileID: 3307640626305312414, guid: 0bd577c22be754e4fb65539e4d7bee32,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd577c22be754e4fb65539e4d7bee32, type: 3}
@@ -1479,7 +1482,7 @@ PrefabInstance:
     - target: {fileID: 751595127418549375, guid: e82bb6b8b69dd744186a37f330a22f80,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8457381768386868867, guid: e82bb6b8b69dd744186a37f330a22f80,
         type: 3}
@@ -1637,7 +1640,7 @@ PrefabInstance:
     - target: {fileID: 3307640626305312414, guid: 1d31084716896d04e88f286ab481b1b3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d31084716896d04e88f286ab481b1b3, type: 3}
@@ -1707,6 +1710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shape_mirrored004
+      objectReference: {fileID: 0}
+    - target: {fileID: 751595127418549375, guid: 4be267f27ca8d7149b4ae60bc34a42e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be267f27ca8d7149b4ae60bc34a42e3, type: 3}
@@ -1780,7 +1788,7 @@ PrefabInstance:
     - target: {fileID: 4205982697506980022, guid: 48fe1a011c789ff4f992406bca465dbe,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48fe1a011c789ff4f992406bca465dbe, type: 3}
