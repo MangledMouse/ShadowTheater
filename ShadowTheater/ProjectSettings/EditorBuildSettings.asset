@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: a1b1e6f06ed5d9245a6e7e17d1efc99b
+  - enabled: 1
+    path: Assets/Scenes/MirroredShapesScene.unity
+    guid: f40253924206d764fa33cacbab2acc5e
   m_configObjects: {}
